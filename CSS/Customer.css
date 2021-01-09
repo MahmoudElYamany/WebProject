@@ -1,0 +1,104 @@
+body {
+    font-size: .875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*------------*/
+
+.navbar-nav {
+    right: 1rem;
+    cursor: pointer;
+}
+
+.badge-danger {
+    position: relative;
+    top: -16px;
+    left: -15px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 2rem;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+    box-shadow:  1px 0 50px rgba(0, 0, 0, .2);
+    color:white;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 1.5rem;
+    }
+    .navbar-nav {
+        right: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+.insideSidebar {
+    padding-inline-start: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: white;
+    font-size: large;
+}
+
+.colcolor {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #2d4e7c;
+}
+
+.sidebar .nav-link:hover .feather, 
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+/* Navbar*/
+.navbar{
+    background-color: #2d4e7c;
+}
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset 1px 3px rgba(0, 0, 0, .2);
+}
+
+.navbar .navbar-toggler {
+       right: 1rem;
+}
+
+/**/
