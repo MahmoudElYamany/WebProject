@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        <span class="CTAs">Home</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="CTAs">About</span>
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        <span class="CTAs">Pages</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-image"></i>
+                        <span class="CTAs">Portofilio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <span class="CTAs">FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="CTAs">Contant</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip" title="Notification"></i>
+                                <span class="badge badge-danger">4</span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!--MainBody-->
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class=" bd-highlight">
+                    <i class="bi bi-file-text" style="font-size: 40px;"></i>
+                </div>
+                <div class="pt-2 bd-highlight">
+                    <h3 class="mb-0">Manufacturer Ledger</h3>
+                    <!-- <small class="p-auto">Manage Customer</small> -->
+                </div>
+            </div>
+            <hr>
+
+            <table id="Table_id" class="table table-borderlessd" style="width:100%">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Dated</font>
+                            </font>
+                        </th>
+                        <th class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Description</font>
+                            </font>
+                        </th>
+                        <th class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Voucher NO</font>
+                            </font>
+                        </th>
+                        <th class="text-right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Debit</font>
+                            </font>
+                        </th>
+                        <th class="text-right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Credit</font>
+                            </font>
+                        </th>
+                        <th class="text-right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Balance</font>
+                            </font>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-10-15</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822083338</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822083338</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 20,000.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -20,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-10-15</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822083338</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822083338</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 20,000.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 0.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ 0.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-10-10</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822061129</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822061129</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 12,000.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -12,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-10-10</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822061129</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822061129</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 12,000.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 0.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ 0.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-10-01</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822061032</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822061032</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 5,000.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -5,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-09-16</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822084358</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822084358</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 20,000.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -25,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-09-16</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822084358</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822084358</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 20,000.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 0.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -5,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-09-16</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822055003</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822055003</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 15,000.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -20,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-09-16</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822055003</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822055003</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 15,000.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 0.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -5,000.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">2020-09-16</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Purchase No.20200822052508</font>
+                            </font>
+                        </td>
+                        <td>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">20200822052508</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">$ 0.00</font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> $ 400.00 </font>
+                            </font>
+                        </td>
+                        <td align="right">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    $ -5,400.00 </font>
+                            </font>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" align="right"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Grand Total:</font></font></b></td>
+                        <td align="right"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 67,000.00</font></font></b>
+                        </td>
+                        <td align="right"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 72,400.00</font></font></b>
+                        </td>
+                        <td align="right"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ -5,400.00</font></font></b></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--Table-->
+    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!--customer js-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#Table_id').DataTable();
+        });
+
+
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
