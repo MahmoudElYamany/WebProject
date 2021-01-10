@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Add Manfucture</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
     <!--Tables-->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/">
+
 
 </head>
 
@@ -36,12 +36,24 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
-                        <span class="CTAs">Home</span>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-slideshare"></i>
+                        <span class="CTAs">DashBoard</span>
                     </a>
-                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                </li>
+                <li >
+                    <a href="../HTML/Customer.html">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="CTAs">Customer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span class="CTAs">Invoice</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu1">
                         <li>
                             <a href="#">Home 1</a>
                         </li>
@@ -54,52 +66,48 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fas fa-briefcase"></i>
-                        <span class="CTAs">About</span>
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tablets"></i>
+                        <span class="CTAs">Medicane</span>
                     </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        <span class="CTAs">Pages</span>
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <ul class="collapse list-unstyled " id="homeSubmenu2">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="#">Home 1</a>
                         </li>
                         <li>
-                            <a href="#">Page 2</a>
+                            <a href="#">Home 2</a>
                         </li>
                         <li>
-                            <a href="#">Page 3</a>
+                            <a href="#">Home 3</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-image"></i>
-                        <span class="CTAs">Portofilio</span>
+
+                <li class="active">
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-industry"></i>
+                        <span class="CTAs">Mafucture</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-question"></i>
-                        <span class="CTAs">FAQ</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-paper-plane"></i>
-                        <span class="CTAs">Contant</span>
-                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu3">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                    <a href="#" class="download">Download source</a>
                 </li>
                 <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                    <a href="#" class="article">Back to article</a>
                 </li>
             </ul>
         </nav>
@@ -114,7 +122,9 @@
                         <i class="fas fa-align-left "></i>
 
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
 
@@ -122,12 +132,14 @@
                         <ul class="nav navbar-nav ml-auto">
 
                             <li class="nav-item  ">
-                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip" title="Notification"></i>
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
                                 <span class="badge badge-danger">4</span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i>
+                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Sign out"></i>
                             </li>
 
                         </ul>
@@ -138,142 +150,80 @@
             <!--MainBody-->
             <section class="content-header">
                 <div class="header-icon">
-
-
-
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class=" bd-highlight">
                             <i class="bi bi-file-text" style="font-size: 40px;"></i>
                         </div>
                         <div class="pt-2 bd-highlight">
-                            <h3 class="mb-0">Add Manufacturer</h3>
-                            <!--<small class="p-auto">Manage Manufacturer</small> -->
+                            <h3 class="mb-0">Manufacturer</h3>
+                            <small class="p-auto">Add Manufacturer</small>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <form class="px-4">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="inlineFormInputGroup">Manfucture Name<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="inlineFormInputGroup" required>
 
 
 
-            <section class="content">
 
-                <div class="row">
+                    </div>
 
-                </div>
+                    <div class="form-group col-md-6 ">
+                        <label for="inlineFormInputGroup">Email<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="inlineFormInputGroup" required>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel panel-bd lobidrag">
-                            <form action="https://pharmacyv5.bdtask.com/pharmacare-9.3_demo/Cmanufacturer/insert_manufacturer" id="insert_manufacturer" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-                                <input type="hidden" name="csrf_test_name" value="37e6d757488179ff69c3c902c22c34c3">
-                                <div class="panel-body">
-                                    <div class="col-sm-6">
-                                        <div class="form-group row">
-                                            <label for="manufacturer_name" class="col-sm-4 col-form-label">Manufacturer Name </label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="manufacturer_name" id="manufacturer_name" type="text" placeholder="Manufacturer  Name" required="" tabindex="2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="mobile" class="col-sm-4 col-form-label">Manufacturer Mobile <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="mobile" id="mobile" type="number" placeholder="Manufacturer  Mobile" min="0" tabindex="2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="phone" class="col-sm-4 col-form-label">Phone <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="phone" id="phone" type="number" placeholder="Phone" min="0" tabindex="2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="email" class="col-sm-4 col-form-label">Email <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="email" id="email" type="email" placeholder="Email" tabindex="2">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="emailaddress" class="col-sm-4 col-form-label">Email Address <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="emailaddress" id="emailaddress" type="email" placeholder="Email Address">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="contact" class="col-sm-4 col-form-label">Contact <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="contact" id="contact" type="text" placeholder="Contact">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="fax" class="col-sm-4 col-form-label">Fax <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="fax" id="fax" type="text" placeholder="Fax">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="city" class="col-sm-4 col-form-label">City <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="city" id="city" type="text" placeholder="City">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group row">
-                                            <label for="state" class="col-sm-4 col-form-label">State <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="state" id="state" type="text" placeholder="State">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="zip" class="col-sm-4 col-form-label">Zip code <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" name="zip" id="zip" type="text" placeholder="Zip code">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="country" class="col-sm-4 col-form-label">Country <i class="text-danger"></i></label>
-                                            <div class="col-sm-8">
-                                                <select name="country" class="form-control select2-hidden-accessible" aria-hidden="true" tabindex="-1">
-                                                <option value=" ">Select Country</option>
-                                                <option value="Afghanistan">Afghanistan</option>
-                                                <option value="Canada">Canada</option>
-                                                   <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                                   <option value="Laos">Laos</option>
-                                          </select>
-                                                <!-- <span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span>
-                                                </span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                                <span style="width: 600px;"><span class="select2-selection--single" aria-labelledby="select2-country-5w-container"><span role="presentation"></span></span>
-                                                </span><span class="dropdown-wrapper"></span> -->
-                                            </div>
-                                        </div>
-                                        <div class="form-group row"><label for="address " class="col-sm-4 col-form-label">Manufacturer Address</label>
-                                            <div class="col-sm-8"><textarea class="form-control" name="address" id="address " rows="2" placeholder="Manufacturer  Address"></textarea></div>
-                                        </div>
-                                        <div class="form-group row"><label for="address2 " class="col-sm-4 col-form-label">Address2</label>
-                                            <div class="col-sm-8"><textarea class="form-control" name="address2" id="address2" rows="2" placeholder="Manufacturer  Address2"></textarea></div>
-                                        </div>
-                                        <div class="form-group row"><label for="details" class="col-sm-4 col-form-label">Manufacturer Details</label>
-                                            <div class="col-sm-8"><textarea class="form-control" name="details" id="details" rows="2" placeholder="Manufacturer Details" tabindex="4"></textarea></div>
-                                        </div>
-                                        <div class="form-group row"><label for="previous_balance" class="col-sm-4 col-form-label">Previous Balance</label>
-                                            <div class="col-sm-8"><input class="form-control" name="previous_balance" id="previous_balance" type="text" min="0" placeholder="Previous Balance" tabindex="5"></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row"><label for="example-text-input" class="col-sm-4 col-form-label"></label>
-                                        <div class="col-sm-6"><input type="submit" id="add-manufacturer" class="btn btn-primary btn-large" name="add-manufacturer" value="Save" tabindex="6"><input type="submit" value="Save And Add Another" name="add-manufacturer-another" class="btn btn-large btn-success"
-                                                id="add-manufacturer-another" tabindex="5"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputMobile">Mobile <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="inputMobile" placeholder="xxx-xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPhone">Phone</label>
+                        <input type="tel" class="form-control" id="inputPhone" placeholder="xxx-xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputFax">Fax</label>
+                        <input type="tel" class="form-control" id="inputFax" placeholder="xxx-xxxxxxxxx" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City*</label>
+                        <input type="text" class="form-control" id="inputCity" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-warning float-right">Submit</button>
+            </form>
+
+
+
+
         </div>
-    </div>
-    </div>
-    </section>
-    </div>
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -284,18 +234,14 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <!--Table-->
-    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
-    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+
     <!--customer js-->
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#Table_id').DataTable();
-        });
 
 
-        $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
         });

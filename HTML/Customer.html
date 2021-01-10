@@ -1,164 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>Customer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="../CSS/Customer.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+    
+
 </head>
 
 <body>
-    <!--Nav Bar-->
-    <nav class="navbar navbar-dark sticky-top  flex-md-nowrap p-0 shadow">
-        <!--logo-->
-        <img src="https://dummyimage.com/250x50" class="rounded-lg p-2" alt="logo">
-        <!--collapse button-->
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
-            data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--data inside navbar-->
-        <ul class="navbar-nav position-absolute ">
-            <li class="nav-item text-nowrap ">
-                <i class="bi bi-bell text-white" style="font-size: 2rem; "  data-toggle="tooltip" title="Notification" ></i>
-                <span class="badge badge-danger">4</span>
-                <i class="bi bi-box-arrow-right text-white " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i>
 
-            </li>
-        </ul>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <!--Side Bar-->
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar bg-success collapse">
-                <div class="sidebar-sticky  ">
-                    <ul class="nav flex-column">
-                        <!--image -->
-                        <div class="text-center">
-                            <img src="https://dummyimage.com/75x75" class="rounded-circle" alt="User Image">
-                            <p>Admin User</p>
-                            <p  ><i class="bi bi-circle-fill text-danger"></i> Online</p>
-                            <hr>
-                        </div>
-                        <!--data-->
-                        <li class="nav-item">
-                            <a class="nav-link active " href="#">
-                                <i class="bi bi-wallet2 feather"></i>
-                                Dashboard <span class="sr-only">(current)</span>
-                            </a>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li >
+                    <a href="#">
+                        <i class="fab fa-slideshare"></i>
+                        <span class="CTAs">DashBoard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="CTAs">Customer</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span class="CTAs">Invoice</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu1">
+                        <li>
+                            <a href="#">Home 1</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " type="navbar" data-toggle="collapse" data-target="#collapseExample"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                <i class="bi bi-wallet2 feather"></i>
-                                Invoice
-                            </a>
-                            <div class="collapse " id="collapseExample">
-                                <div class="card card-body colcolor">
-                                    <ul class="insideSidebar">
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <li>
+                            <a href="#">Home 2</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " type="navbar" data-toggle="collapse" data-target="#collapseExample1"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                <i class="bi bi-wallet2 feather"></i>
-                                Invoice
-                            </a>
-                            <div class="collapse " id="collapseExample1">
-                                <div class="card card-body colcolor">
-                                    <ul class="insideSidebar">
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <li>
+                            <a href="#">Home 3</a>
                         </li>
-                        
-                        <li class="nav-item ">
-                            <a class="nav-link " type="navbar" data-toggle="collapse" data-target="#collapseExample2"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                <i class="bi bi-wallet2 feather"></i>
-                                Invoice
-                            </a>
-                            <div class="collapse " id="collapseExample2">
-                                <div class="card card-body colcolor">
-                                    <ul class="insideSidebar">
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="#">Orders</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        
-                       
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-wallet2 feather"></i>
-                                Orders
-                            </a>
-                        </li>
-                       
                     </ul>
+                </li>
+                <li >
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tablets"></i>
+                        <span class="CTAs">Medicane</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu2">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li >
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-industry"></i>
+                        <span class="CTAs">Mafucture</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu3">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>                    
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="#" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
+                                <span class="badge badge-danger">4</span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Sign out"></i>
+                            </li>
+
+                        </ul>
+
+                    </div>
                 </div>
             </nav>
-            <!-- Main Body-->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 py-3 px-md-5">
+            <!--MainBody-->
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class=" bd-highlight">
+                    <i class="bi bi-file-text" style="font-size: 40px;"></i>
+                </div>
+                <div class="pt-2 bd-highlight">
+                    <h3 class="mb-0">Customer</h3>
+                    <small class="p-auto">Manage Customer</small>
+                </div>
+            </div>
+            <hr>
+            <table id="Table_id" class="table table-borderlessd">
+                <thead>
+                    <tr>
+                        <th>Cust0mer Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Phone</th>
+                        <th>E-mail</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
 
-                <h1>Customer</h1>
-              
-
-                
-               
-            </main>
+                </tbody>
+            </table>
+            <br>
+            <a class="btn btn-primary float-right" href="../HTML/CustomerFill.html" role="button">Add Customer</a>
         </div>
+
+        
+
     </div>
-    
+    </div>
 
-
-
-
-
-
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../JS/DashBoard.js"></script>
+    <!-- Popper.JS -->
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--Table-->
+    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!--customer js-->
+    <script type="text/javascript">
+
+        $('#Table_id').DataTable();
+        $('#table').DataTable( {
+  
+} );
+
+
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+    </script>
 </body>
 
 </html>
