@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+    
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        <span class="CTAs">Home</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        <span class="CTAs">About</span>
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        <span class="CTAs">Pages</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-image"></i>
+                        <span class="CTAs">Portofilio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <span class="CTAs">FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="CTAs">Contant</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
+                                <span class="badge badge-danger">4</span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Sign out"></i>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!--MainBody-->
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class=" bd-highlight">
+                    <i class="bi bi-file-text" style="font-size: 40px;"></i>
+                </div>
+                <div class="pt-2 bd-highlight">
+                    <h3 class="mb-0">Manage Invoice</h3>
+                    <small class="p-auto">Manage your invoice</small>
+                </div>
+            </div>
+            <hr>
+
+            <button type="button" class="btn btn-primary btn-md">New Invoice</button>
+            <button type="button" class="btn btn-secondary btn-md">POS Invoice</button>
+            <hr>
+            
+            <table id="Table_id" class="table table-borderlessd">
+                <thead>
+                    <tr>
+                        <th>SL.</th>
+                        <th>Invoice No.</th>
+                        <th>Customer Name</th>
+                        <th>Date</th>
+                        <th>Total Amount</th>
+                        <th>Action</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>1041</td>
+                        <td>Smith</td>
+                        <td>2021-01-10</td>
+                        <td>$2,818.67</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1040</td>
+                        <td>Walking Customer</td>
+                        <td>2021-01-10</td>
+                        <td>$17.00</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1039</td>
+                        <td>Bcon Pharma	</td>
+                        <td>2021-01-10</td>
+                        <td>$6,870.04</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1038</td>
+                        <td>Walking Customer</td>
+                        <td>2021-01-10</td>
+                        <td>$436.63</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>1037</td>
+                        <td>Walking Customer</td>
+                        <td>2021-01-10</td>
+                        <td>$1,186.35</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>1036</td>
+                        <td>Walking Customer</td>
+                        <td>2021-01-10</td>
+                        <td>$627.00	</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>1035</td>
+                        <td>Jhon</td>
+                        <td>2020-08-27</td>
+                        <td>$5,670.15</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>1034</td>
+                        <td>Lucy</td>
+                        <td>2020-08-24</td>
+                        <td>$5,296.00</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>1032</td>
+                        <td>Smith</td>
+                        <td>2020-09-03</td>
+                        <td>$881.93</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>1033</td>
+                        <td>Osaki</td>
+                        <td>2020-09-09</td>
+                        <td>$3,241.17</td>
+                        <td>
+                            <button type="button" class="btn btn-success btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="bi bi-collection"></i>
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm">
+                                <i class="bi bi-arrow-up-circle-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--Table-->
+    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!--customer js-->
+    <script type="text/javascript">
+
+        $('#Table_id').DataTable();
+        $('#table').DataTable( {
+  
+} );
+
+
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+    </script>
+</body>
+
+</html>
