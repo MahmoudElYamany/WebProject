@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
 
+    <!-- test js tables  -->
+    <link rel="stylesheet" href="test.js">
+
 
 </head>
 
@@ -34,73 +37,79 @@
                 <strong>BS</strong>
             </div>
 
+           
             <ul class="list-unstyled components">
-                <li >
+                <li>
                     <a href="#">
                         <i class="fab fa-slideshare"></i>
-                        <span class="CTAs">DashBoard</span>
+                        <span class="CTAs">Dash Board</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="#">
-                        <i class="fas fa-user-friends"></i>
+                <li>
+                    <a href="Customer.html">
+                        <i class="fad fa-user-friends"></i>
                         <span class="CTAs">Customer</span>
                     </a>
                 </li>
-                <li >
+                <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-hand-holding-usd"></i>
                         <span class="CTAs">Invoice</span>
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="">New Invoice </a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">Manage Invoice</a>
                         </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
+                        
                     </ul>
                 </li>
-                <li >
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <li>
+                    
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-tablets"></i>
-                        <span class="CTAs">Medicane</span>
+                        <span class="CTAs">Medicine</span>
                     </a>
-                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="A.Page1.html">Category</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">Add Medicine</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="A.Page2.html"> Manage Medicine</a>
                         </li>
                     </ul>
                 </li>
                 
-                <li >
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-industry"></i>
-                        <span class="CTAs">Mafucture</span>
+                <li>
+                   
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-industry"></i>                      
+                          <span class="CTAs">Manufacturer</span>
                     </a>
-                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="H_Add_Manufacturer.html">Add Manufacturer</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="H_Manage_Manufacturer.html">Manage Manufacturer</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="H_Manufacturer_Ledger.html">Manufacturer Ledger</a>
                         </li>
                     </ul>
-                </li>                    
+                </li>
+                <li>
+                    <a href="stock.html">
+                        <i class="fad fa-user-friends"></i>
+                        <span class="CTAs">Stock </span>
+                    </a>
+                </li>
             </ul>
-
             <ul class="list-unstyled CTAs">
                 <li>
                     <a href="#" class="download">Download source</a>
@@ -205,7 +214,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-warning float-right">Submit</button>
+                <button type="submit" class="btn btn-warning float-right" onclick="">Submit</button>
             </form>
 
 
