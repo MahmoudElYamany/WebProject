@@ -148,12 +148,11 @@ span {
 #sidebar ul li a i {
     margin-right: 10px;
 }
-
+/* 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #cbf3f0;
-    /* background: #00a896; */
-}
+   
+} */
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -273,3 +272,13 @@ table {
     width: 100%;
     border-collapse: collapse;
 } 
+/* -------------MoDal Style------------- */
+
+#hh{
+    border-radius: 20px;
+    color: red;
+
+}
+.dele{
+    color: black;
+}
