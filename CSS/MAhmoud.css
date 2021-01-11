@@ -141,8 +141,8 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #00a896;
-    background: #cbf3f0;
+    color: #cbf3f0;
+    background: #0cc2b0;
 }
 
 #sidebar ul li a i {
@@ -152,7 +152,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #cbf3f0;
-    background: #00a896;
+    /* background: #00a896; */
 }
 
 a[data-toggle="collapse"] {
