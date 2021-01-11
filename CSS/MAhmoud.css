@@ -13,7 +13,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #cbf3f0;
 }
 
 a,
@@ -69,8 +69,8 @@ span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
-    color: #fff;
+    background: #028090;
+    color: #f0fffe;
     transition: all 0.3s;
 }
 
@@ -121,7 +121,7 @@ span {
 
 #sidebar .sidebar-header {
    
-    background: #6d7fcc;
+    background: #028090;
 }
 
 #sidebar .sidebar-header strong {
@@ -131,7 +131,7 @@ span {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #028090;
 }
 
 #sidebar ul li a {
@@ -141,8 +141,8 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: #00a896;
+    background: #cbf3f0;
 }
 
 #sidebar ul li a i {
@@ -151,8 +151,8 @@ span {
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: #cbf3f0;
+    background: #00a896;
 }
 
 a[data-toggle="collapse"] {
@@ -170,7 +170,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #00a896;
 }
 
 ul.CTAs {
@@ -187,12 +187,12 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: #00a896;
 }
 
 a.article,
 a.article:hover {
-    background: #6d7fcc !important;
+    background: #00a896 !important;
     color: #fff !important;
 }
 
@@ -273,7 +273,3 @@ table {
     width: 100%;
     border-collapse: collapse;
 } 
-
-.paging_simple_numbers{
-     
- }
