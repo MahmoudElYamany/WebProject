@@ -1,10 +1,28 @@
 
+//slide bar
 $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
 });
 
+//canvas video
+var video = document.getElementById("videoElement");
+        var canvas = document.getElementById("showscreenshot");
 
 
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(function (stream) { video.srcObject = stream; })
+                .catch(function (error) { console.log("Something went wrong!"); }
+                );
+        }
+        //ScreenShot
+        function takescreenshot() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext("2d").drawImage(video, 0, 0);
+        }
+
+//database custumer
 if (window.openDatabase) {
     //Create the database the parameters are 1. the database name 2.version number 3. a description 4. the size of the database (in bytes) 1024 x 1024 = 1MB
     
