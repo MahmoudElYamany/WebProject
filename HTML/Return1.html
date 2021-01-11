@@ -16,7 +16,7 @@
 
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!-- <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script> -->
     <!--Tables-->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
@@ -226,7 +226,7 @@
                             <button type="button"class="btn btn-sm" style="background-color: #028090;color: white;" aria-placeholder="invoice" >
                                 <i class="bi bi-pencil-square"></i>
                             </button>
-                            <button type="button" class="btn btn-danger btn-sm">
+                            <button type="button" class="btn btn-danger btn-sm" data-target="#hh" data-toggle="modal">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -243,7 +243,7 @@
                             <button type="button"class="btn btn-sm" style="background-color: #028090;color: white;" aria-placeholder="invoice" >
                                 <i class="bi bi-pencil-square"></i>
                             </button>
-                            <button type="button" class="btn btn-danger btn-sm">
+                            <button type="button" class="btn btn-danger btn-sm" data-target="#hh" data-toggle="modal">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -256,6 +256,28 @@
 
         </div>
     </div>
+
+    <div class="modal" tabindex="-1" id="hh">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Oh Attention!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="dele">Are You Sure That You Want To Delete it?
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="button" class="btn btn-danger">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
