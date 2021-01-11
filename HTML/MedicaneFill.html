@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Customer Fill</title>
+    <title>Medicine Fill</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -46,9 +46,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Customer.html">
+                    <a href="Medicine.html">
                         <i class="fas fa-user-friends"></i>
-                        <span class="CTAs">Customer</span>
+                        <span class="CTAs">Medicine</span>
                     </a>
                 </li>
                 <li class="active">
@@ -195,68 +195,160 @@
                     <i class="bi bi-file-medical" style="font-size: 45px;"></i>
                 </div>
                 <div class="pt-2 bd-highlight">
-                    <h3 class="mb-0">Customer</h3>
-                    <small class="p-auto">Add Customer</small>
+                    <h3 class="mb-0">Medicine</h3>
+                    <small class="p-auto">Add Medicine</small>
                 </div>
             </div>
             <hr>
-            <!--input customer-->
+            <!--input Medicine-->
             <form class="px-4">
+                <h4>Medicine Detials:</h4>
                 <div class="form-row ">
-                    <div class="form-group col-md-6">
-                        <label for="inlineFormInputGroup">Customer Name<span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="inlineFormInputGroup" required>
-                    </div>
-                    <div class="form-group col-md-6 ">
-                        <div class="form-group ">
-                            <label for="inputGender">Gender<span class="text-danger">*</span> </label>
-                            <select id="inputGender" class="form-control" required>
-                                <option selected>Male</option>
-                                <option>Female</option>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="inputEmail">E-mail<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="inputEmail">
+                        <label for="inputmedicine">Medicine Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inputmedicine">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputMobile">Mobile <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control" id="inputMobile" placeholder="xxx-xxxxxxxxx" required>
+                        <label for="inputgeneric">Generic Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inputgeneric" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputPhone">Phone</label>
-                        <input type="tel" class="form-control" id="inputPhone" placeholder="xxx-xxxxxxxxx">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-5">
-                        <label for="inputCity">City<span class="text-danger">*</span></label>
+                        <label for="inputunit">Unit<span class="text-danger">*</span></label>
                         <select id="inputState" class="form-control" required>
                             <option selected>Choose...</option>
+                            <option selected>pics</option>
+                            <option selected>liquid</option>
+                            <option selected>...</option>
                         </select>
                     </div>
+                </div>
+                <div class="form-row ">
                     <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
+                        <label for="inputSize">box-size <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inputSize" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputStrength">Strength</label>
+                        <input type="text" class="form-control" id="inputStrength">
+                    </div>
+                </div>
+                <div class="form-group pb-4">
+                    <label for="inputdetial">Detials</label>
+                    <textarea class="form-control " id="inputdetial" rows="2"></textarea>
+                </div>
+
+                <hr class="pb-2">
+                <h4>Pharmacy Detials:</h4>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputprint">Barcode or QCode</span></label>
+                        <input type="text" class="form-control" id="inputprint">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputtype">Medicine Type<span class="text-danger">*</span></label>
+                        <select id="inputtype" class="form-control">
                             <option selected>Choose...</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                    <div class="form-group col-md-4">
+                        <label for="inputCategory">Category</label>
+                        <select id="inputCategory" class="form-control">
+                            <option selected>Choose...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-4">
+                        <label for="inputShelf">Medicine Shelf</label>
+                        <input type="text" class="form-control" id="inputShelf">
+                    </div>
+                    <div class="form-group col-md-4 align-items-center d-flex pl-4 pt-4">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="exampleModalLabel">Medicine Image</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--body popup-->
+                                        <video autoplay="true" id="videoElement" class="rounded-circle align-items-center d-flex m-auto " width="400" ></video>
+                                        <canvas id="showscreenshot"></canvas>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary " class="rounded-circle align-items-center d-flex m-auto " onclick="takescreenshot();">Primary</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Apper message after taking imag-->
+                        <span class="text-success "><i class="fas fa-check"></i>Done</span>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-warning float-right" onclick="addCustomer()">Submit</button>
+                <hr class="py-2">
+                <h4>Price Detials:</h4>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputprice">Sell Price<span class="text-danger">*</span></label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="inputprice">
+                            <div class="input-group-append">
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputVAT">VAT</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="inputVAT">
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputTAX">TAX</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="inputTAX">
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputManufacturer">Manufacturer<span class="text-danger">*</span></label>
+                        <select id="inputManufacturer" class="form-control">
+                            <option selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputManufPrice">Manufacturer Price<span class="text-danger">*</span></label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="inputManufPrice">
+                            <div class="input-group-append">
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-warning float-right" onclick="addMedicine()">Submit</button>
             </form>
 
 
@@ -272,14 +364,31 @@
     <!-- Bootstrap JS -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!--customer js-->
-    <script src="../JS/customer.js"></script>
+    <!--Medicine js-->
+    <script src="../JS/Medicine.js"></script>
     <script type="text/javascript">
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');
         });
 
-        
+
+        var video = document.getElementById("videoElement");
+        var canvas = document.getElementById("showscreenshot");
+
+
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(function (stream) { video.srcObject = stream; })
+                .catch(function (error) { console.log("Something went wrong!"); }
+                );
+        }
+        //ScreenShot
+        function takescreenshot() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            canvas.getContext("2d").drawImage(video, 0, 0);
+        }
+
 
     </script>
 </body>
