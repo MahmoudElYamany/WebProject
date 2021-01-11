@@ -199,10 +199,10 @@
                 </div>
             </div>
             <hr>
-            <table id="Table_id" class="table table-borderlessd">
+            <!-- <table id="Table_id" class="table table-borderlessd w-100" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Cust0mer Name</th>
+                        <th>Customer Name</th>
                         <th>Address</th>
                         <th>Mobile</th>
                         <th>Phone</th>
@@ -278,14 +278,29 @@
                     </tr>
 
                 </tbody>
+            </table> -->
+            <table id="Table_id" class="table table-borderlessd w-100" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Phone</th>
+                        <th>E-mail</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id='data'></tbody>
             </table>
             <br>
             <a class="btn btn-primary float-right" href="../HTML/CustomerFill.html" role="button">Add Customer</a>
-        </div>
-
         
-
-    </div>
+        
+        
+        
+        
+        </div>
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -294,24 +309,20 @@
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Font Awesome JS -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!--Table-->
-    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
     <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    
     <!--customer js-->
+    <script src="../JS/customer.js"></script>
     <script type="text/javascript">
-
-        $('#Table_id').DataTable();
-        $('#table').DataTable( {
-  
+        $(document).ready( function () {
+    $('#Table_id').DataTable();
 } );
+       
 
 
 
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
+    
 
     </script>
 </body>
