@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
 
-
+    <!-- test js tables  -->
+    <link rel="stylesheet" href="test.js">
 
 
 </head>
@@ -213,7 +214,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputunit">Unit<span class="text-danger">*</span></label>
-                        <select id="inputunit" class="form-control" required>
+                        <select id="inputState" class="form-control" required>
                             <option selected>Choose...</option>
                             <option selected>pics</option>
                             <option selected>liquid</option>
@@ -229,10 +230,6 @@
                     <div class="form-group col-md-4">
                         <label for="inputStrength">Strength</label>
                         <input type="text" class="form-control" id="inputStrength">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputdate">Expire date</label>
-                        <input type="date" class="form-control" id="inputdate">
                     </div>
                 </div>
                 <div class="form-group pb-4">
@@ -264,10 +261,6 @@
                     <div class="form-group col-md-4">
                         <label for="inputShelf">Medicine Shelf</label>
                         <input type="text" class="form-control" id="inputShelf">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputquantity">Quantity</label>
-                        <input type="number" class="form-control" id="inputquantity">
                     </div>
                     <div class="form-group col-md-4 align-items-center d-flex pl-4 pt-4">
                         <!-- Button trigger modal -->
@@ -310,9 +303,9 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="inputManufPrice">Manfuacturer Price<span class="text-danger">*</span></label>
+                        <label for="inputprice">Sell Price<span class="text-danger">*</span></label>
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="inputManufPrice">
+                            <input type="number" class="form-control" id="inputprice">
                             <div class="input-group-append">
                                 <span class="input-group-text">0.00</span>
                             </div>
@@ -344,7 +337,15 @@
                             <option selected>Choose...</option>
                         </select>
                     </div>
-                    
+                    <div class="form-group col-md-4">
+                        <label for="inputManufPrice">Manufacturer Price<span class="text-danger">*</span></label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="inputManufPrice">
+                            <div class="input-group-append">
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-warning float-right" onclick="addMedicine()">Submit</button>
@@ -364,7 +365,7 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--Medicine js-->
-    <script src="../JS/medicence.js"></script>
+    <script src="../JS/customer.js"></script>
    
 
         
