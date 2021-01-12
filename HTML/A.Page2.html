@@ -20,7 +20,7 @@
     <!--Tables-->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/">
+    
 
 </head>
 
@@ -209,89 +209,14 @@
                         <th>Manfacturer Name </th>
                         <th>Shelf</th>
                         <th>Sell Price </th>
-                        <th>Purchase Price </th>
+                    
                         <th>Strength </th>
                         <th>Image  </th>
                         <th>Action  </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">Abon 42(500 mg + 200 IU)</td>
-                        <td class="col" >Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                          
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col">Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                      
-                            </button>
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col">Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                       
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col"> Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                     
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-
+                <tbody id="data"></tbody>
                 </tbody>
-
             </table>
 
 
@@ -320,29 +245,24 @@
           </div>
         </div>
       </div>
+
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Popper.JS -->
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Font Awesome JS -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!--Table-->
-    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
     <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    
     <!--customer js-->
+    <script src="../JS/medicence.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#Table_id').DataTable();
         });
 
 
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
     </script>
 </body>
 
