@@ -6,36 +6,33 @@ $('#sidebarCollapse').on('click', function () {
 
 //canvas video
 var video = document.getElementById("videoElement");
-        var canvas = document.getElementById("showscreenshot");
+var canvas = document.getElementById("showscreenshot");
 
 
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-                .then(function (stream) { video.srcObject = stream; })
-                .catch(function (error) { console.log("Something went wrong!"); }
-                );
-        }
-        //ScreenShot
-        function takescreenshot() {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            canvas.getContext("2d").drawImage(video, 0, 0);
-        }
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        .then(function (stream) { video.srcObject = stream; })
+        .catch(function (error) { console.log("Something went wrong!"); }
+        );
+}
+//ScreenShot
+function takescreenshot() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0);
+}
 
 //database custumer
 if (window.openDatabase) {
     //Create the database the parameters are 1. the database name 2.version number 3. a description 4. the size of the database (in bytes) 1024 x 1024 = 1MB
-    
     var db = openDatabase('pharmacy', '1.0', 'Test DB', 2 * 1024 * 1024);
     db.transaction(function (tx) {
-           //tx.executeSql('drop table user')
+        //tx.executeSql('drop table user')
         tx.executeSql('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY ASC ,customerName ,Address,Mobile,Phone,Email,Gender)');
     });
 } else {
     alert("WebSQL is not supported by your browser!");
 }
-
-
 
 //function to output the list of cars in the database
 
@@ -44,30 +41,26 @@ function updatecustomerList(transaction, results) {
     var listitems = "";
     //get the car list holder ul
     var listholder = document.getElementById("data");
-
     //clear cars list ul
     listholder.innerHTML = "";
-
-
     //Iterate through the results
     for (var i = 0; i < results.rows.length; i++) {
         //Get the current row
         var row = results.rows.item(i);
 
-        listholder.innerHTML += "<tr>" + "<td>" + row.customerName + " </td>" + "<td>" + row.Address +" </td>" + 
-                                "<td>" + row.Mobile + "</td>" + "<td>" + row.Phone + " </td>" + 
-                                "<td>" + row.Email + "</td>" + "<td>" + row.Gender + " </td>" + 
-                                "<td>" + "<button type='button' class='btn btn-success btn-sm'>"+ 
-                                "<i class='bi bi-pencil-square'></i>" + "</button>" +
-         "<a class='btn btn-danger btn-sm' href='javascript:void(0)' role='button' onclick='customer(" + row.id + ")'><i class='bi bi-trash'></i></a>"
-                +"</td>" + "</tr>";
+        listholder.innerHTML += "<tr>" + "<td>" + row.customerName + " </td>" + "<td>" + row.Address + " </td>" +
+            "<td>" + row.Mobile + "</td>" + "<td>" + row.Phone + " </td>" +
+            "<td>" + row.Email + "</td>" + "<td>" + row.Gender + " </td>" +
+            "<td>" + "<button type='button' class='btn btn-success btn-sm'>" +
+            "<i class='bi bi-pencil-square'></i>" + "</button>" +
+            "<a class='btn btn-danger btn-sm' href='javascript:void(0)' role='button' onclick='customer(" + row.id + ")'><i class='bi bi-trash'></i></a>"
+            + "</td>" + "</tr>";
 
     }
 
 }
 
 //function to get the list of cars from the database
-
 function outputcustomerlist() {
     //check to ensure the db object has been created
     if (db) {
@@ -80,8 +73,7 @@ function outputcustomerlist() {
     }
 }
 
-// //function to add the car to the database
-
+//function to add 
 function addCustomer() {
     //check to ensure the db object has been created
     if (db) {
@@ -98,11 +90,11 @@ function addCustomer() {
         var total = address + " , " + city + " , " + state + " , " + zip;
 
         //Test to ensure that the user has entered both a make and model
-        if (name !== "" && gender !=="" && email!=="" && mobile !== "" && city !== "") {
+        if (name !== "" && gender !== "" && email !== "" && mobile !== "" && city !== "") {
             //Insert the user entered details into the cars table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
             db.transaction(function (tx) {
-                tx.executeSql('INSERT INTO user (customerName , address, Mobile, phone, Email, Gender) VALUES (?,?,?,?,?,?)', 
-                [name,total,mobile,Phone,email,gender])
+                tx.executeSql('INSERT INTO user (customerName , address, Mobile, phone, Email, Gender) VALUES (?,?,?,?,?,?)',
+                    [name, total, mobile, Phone, email, gender])
             });
         } else {
             alert("You must enter a name and mmobile!");
@@ -126,8 +118,9 @@ function deletecustomerlist(id) {
         alert("db not found, your browser does not support web sql!");
     }
 }
+outputcustomerlist();
 
- outputcustomerlist();
+//database 
 
 
 

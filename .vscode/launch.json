@@ -8,7 +8,7 @@
             "name": "Chrome",
             "request": "launch",
             "type": "chrome",
-            "file": "${workspaceFolder}"
+            "file": "${workspaceFolder}/invoicefill"
             
         }
     ]
