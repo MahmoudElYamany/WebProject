@@ -4,22 +4,13 @@ $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
 });
 
-//canvas video
-var video = document.getElementById("videoElement");
-var canvas = document.getElementById("showscreenshot");
-
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-        .then(function (stream) { video.srcObject = stream; })
-        .catch(function (error) { console.log("Something went wrong!"); }
-        );
-}
-//ScreenShot
-function takescreenshot() {
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    canvas.getContext("2d").drawImage(video, 0, 0);
-}
+//Date format
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = mm + '/' + dd + '/' + yyyy;
+today2 = yyyy + '-' + mm + '-' + '-' + dd;
 
 /*----------------------------------------------------------------------------------------*/
 //database open
@@ -29,7 +20,6 @@ if (window.openDatabase) {
     db.transaction(function (tx) {
         //tx.executeSql('drop table user')
         tx.executeSql('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY ASC ,customerName ,Address,Mobile,Phone,Email,Gender)');
-        tx.executeSql('CREATE TABLE IF NOT EXISTS Medicine (id INTEGER PRIMARY KEY ASC ,medicineName ,GenericName,unit,boxsize,strength,expiredate,detials,code,Medicinetype,category,shelf,Quantity,image,manufucturerprice,vat,tax,manufucturer)');
     });
 } else {
     alert("WebSQL is not supported by your browser!");
@@ -37,10 +27,11 @@ if (window.openDatabase) {
 
 //function to output the list of customers in the database
 function updatecustomerList(transaction, results) {
+    debugger
     //initialise the listitems variable
     var listitems = "";
     //get the car list holder ul
-    var listholder = document.getElementById("data");
+    var listholder = document.getElementById("datacus");
     //clear cars list ul
     listholder.innerHTML = "";
     //Iterate through the results
@@ -120,3 +111,20 @@ function deletecustomerlist(id) {
 outputcustomerlist();
 /*-----------------------------------------------------------------------------------------*/
 
+//count expire
+db.transaction(function (tx) {
+    tx.executeSql('select expiredate from Medicine  ',
+        [], function (tx, results) {
+            var count = 0;
+            var listholder = document.getElementById("expiredate")
+            for (var i = 0; i < results.rows.length; i++) {
+                for (var prop in results.rows.item(i)) {
+                    if (results.rows.item(i)[prop] < today2) {
+                        count++;
+                        listholder.innerHTML = count
+                        console.log(count);
+                    }
+                }
+            }
+        }, null);
+});

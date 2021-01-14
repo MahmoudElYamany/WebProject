@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
 
-    <!-- test js tables  -->
-    <link rel="stylesheet" href="test.js">
+
 
 
 </head>
@@ -33,14 +32,14 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <!--logo-->
-                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-                <strong>BS</strong>
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
             </div>
 
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">
+                    <a href="dashhhh.html">
                         <i class="fab fa-slideshare"></i>
                         <span class="CTAs">Dash Board</span>
                     </a>
@@ -58,7 +57,7 @@
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="">New Invoice </a>
+                            <a href="invoicefill.html">New Invoice </a>
                         </li>
                         <li>
                             <a href="Manage_Invocie.html">Manage Invoice</a>
@@ -144,13 +143,11 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="list-unstyled CTAs">
+            <ul class="list-unstyled CTAs"  >
                 <li>
-                    <a href="#" class="download">Download source</a>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
                 </li>
-                <li>
-                    <a href="#" class="article">Back to article</a>
-                </li>
+                
             </ul>
         </nav>
 
@@ -176,13 +173,13 @@
                             <li class="nav-item  ">
                                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
                                     title="Notification"></i>
-                                <span class="badge badge-danger">4</span>
+                                <span id="expiredate" class="badge badge-danger"></span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
-                                    title="Sign out"></i>
-                            </li>
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
 
                         </ul>
 
@@ -214,7 +211,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputunit">Unit<span class="text-danger">*</span></label>
-                        <select id="inputState" class="form-control" required>
+                        <select id="inputunit" class="form-control" required>
                             <option selected>Choose...</option>
                             <option selected>pics</option>
                             <option selected>liquid</option>
@@ -230,6 +227,10 @@
                     <div class="form-group col-md-4">
                         <label for="inputStrength">Strength</label>
                         <input type="text" class="form-control" id="inputStrength">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputdate">Expire date</label>
+                        <input type="date" class="form-control" id="inputdate">
                     </div>
                 </div>
                 <div class="form-group pb-4">
@@ -261,6 +262,10 @@
                     <div class="form-group col-md-4">
                         <label for="inputShelf">Medicine Shelf</label>
                         <input type="text" class="form-control" id="inputShelf">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputquantity">Quantity</label>
+                        <input type="number" class="form-control" id="inputquantity">
                     </div>
                     <div class="form-group col-md-4 align-items-center d-flex pl-4 pt-4">
                         <!-- Button trigger modal -->
@@ -294,7 +299,7 @@
                             </div>
                         </div>
                         <!--Apper message after taking imag-->
-                        <span class="text-success "><i class="fas fa-check"></i>Done</span>
+                        <span class="text-success " id="done"></span>
                     </div>
                 </div>
 
@@ -303,9 +308,9 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="inputprice">Sell Price<span class="text-danger">*</span></label>
+                        <label for="inputManufPrice">Manfuacturer Price<span class="text-danger">*</span></label>
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="inputprice">
+                            <input type="number" class="form-control" id="inputManufPrice">
                             <div class="input-group-append">
                                 <span class="input-group-text">0.00</span>
                             </div>
@@ -337,15 +342,7 @@
                             <option selected>Choose...</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputManufPrice">Manufacturer Price<span class="text-danger">*</span></label>
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control" id="inputManufPrice">
-                            <div class="input-group-append">
-                                <span class="input-group-text">0.00</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <button type="submit" class="btn btn-warning float-right" onclick="addMedicine()">Submit</button>
@@ -365,7 +362,7 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--Medicine js-->
-    <script src="../JS/customer.js"></script>
+    <script src="../JS/medicence.js"></script>
    
 
         

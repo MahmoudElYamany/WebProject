@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css">
+    <script type="text/javascript" src="../JS/loogin.js"></script>
+    <title>SmartHome</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-5 col-md-3">
-                <div class="form-login">
-                <h4>Login Form</h4>
-                <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username" />
-                </br>
-                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
-                </br>
-                <div class="wrapper">
-                <span class="group-btn">     
-                    <a href="#" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></a>
-                </span>
-                </div>
-                </div>
-            
-            </div>
-        </div>
-    </div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="login.js"></script>
+    <div class="loginBox">
+        <img src="../image/user.png" class="user">
+        <h2>Log In </h2>
+        <form>
+            <p>Email</p>
+            <input id="first_name" type="text" name="" placeholder="EMAIL">
+            <p>Password</p>
+            <input id="password" type="password" name="" placeholder="PASSWORD">
+            <input type="button" value="Login" id="submit" onclick="validate()">
+            <!-- <a href="#">Forget Password</a> -->
+
+      
+            <p style="text-align: center;">
+                <div class="radio">
+                    <input type="radio" id="radio" name="drone" value="Manger" class="with-gap" style="width: auto;">
+                    <label for="radio" class="label">Manger</label>
+                  </div>
+                  
+                  <div class="radio">
+                    <input type="radio" id="radio" name="drone" value="Pharmasist" style="width: auto;">
+                    <label for="radio" class="label">Pharmasist</label>
+                  </div>
+              </p>
+              
+           
+    </div>  
 </body>
 
 </html>

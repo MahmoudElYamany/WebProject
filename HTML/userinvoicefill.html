@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Customer Fill</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="../CSS/MAhmoud.css">
+  <!-- Font Awesome JS -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!--Tables-->
+  <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+
+
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+          <!--logo-->
+          <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+          <strong>GR</strong>
+      </div>
+
+      <ul class="list-unstyled components">
+          <li>
+              <a href="userdash.html">
+                  <i class="fab fa-slideshare"></i>
+                  <span class="CTAs">Dash Board</span>
+              </a>
+          </li>
+          <li>
+              <a href="userCustomer.html">
+                  <i class="fas fa-user-friends"></i>
+                  <span class="CTAs">Customer</span>
+              </a>
+          </li>
+          <li >
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fas fa-hand-holding-usd"></i>
+                  <span class="CTAs">Invoice</span>
+              </a>
+              <ul class="collapse list-unstyled " id="homeSubmenu">
+                  <li>
+                      <a href="userinvoicefill.html">New Invoice </a>
+                  </li>
+                  
+
+              </ul>
+          </li>
+          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="fas fa-tablets"></i>
+                  <span class="CTAs">Medicine</span>
+              </a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="userA.Page1.html">Category</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="userstock.html">
+                  <i class="fas fa-dolly-flatbed"></i>
+                  <span class="CTAs">Stock </span>
+              </a>
+          </li>
+      </ul>
+
+      <ul class="list-unstyled CTAs"  >
+          <li>
+              <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
+          </li>
+          
+      </ul>
+  </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn ">
+            <i class="fas fa-align-left "></i>
+
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+
+              <li class="nav-item  ">
+                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip" title="Notification"></i>
+                <span id="expiredate" class="badge badge-danger"></span>
+
+              </li>
+              <li class="nav-item t ">
+                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+               </li>
+
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+      <!--MainBody-->
+      <!--header-->
+      <div class="d-flex flex-row bd-highlight mb-3">
+        <div class=" bd-highlight">
+          <i class="bi bi-file-medical" style="font-size: 45px;"></i>
+        </div>
+        <div class="pt-2 bd-highlight">
+          <h3 class="mb-0">Invoice</h3>
+          <small class="p-auto">Add New Invoice</small>
+        </div>
+      </div>
+      <hr>
+      <!--input invoice-->
+<div class="row">
+  <div class="col-md-4 pb-3">
+    <div class="input-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing">Customer Name</span>
+      </div>
+      <input id="inputname" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing">
+      <div class="pl-3">
+        <button type="button" class="btn btn-warning"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!--body invoice-->
+        <div class="row clearfix">
+          <div class="col-md-12">
+            <table class="table table-hover" id="tab_logic">
+              <thead>
+                <tr>
+                 
+                  <th class="text-center"> Product </th>
+                  <th class="text-center"> Qty </th>
+                  <th class="text-center"> Price </th>
+                  <th class="text-center"> Total </th>
+                  <th class="text-center"> Action </th>
+                </tr>
+              </thead>
+              <tbody>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!--Botton ADD & DELETE-->
+                  
+            <!-- <button  class="btn btn-default ">Add Row</button> -->
+            <button  id="add_row"  class="btn btn-warning float-right" >Add Item</button>
+         
+        
+        <!--Box Total-->
+
+          <div class="  col-md-4">
+            <table class="table table-borderless " id="tab_logic_total">
+              <tbody>
+                <tr>
+                  <th class="text-center">Sub Total</th>
+                  <td class="text-center"><input type="number" name='sub_total' placeholder='0.00' class="form-control"
+                      id="sub_total" readonly /></td>
+                </tr>
+                <tr>
+                  <th class="text-center">Tax</th>
+                  <td class="text-center">
+                     <div class="input-group mb-2 mb-sm-0">
+                      <input type="number" class="form-control" id="tax" placeholder="0">
+                      <div class="input-group-append">
+                          <span class="input-group-text">%</span>
+                      </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="text-center">Tax Amount</th>
+                  <td class="text-center">
+                    <input type="number" name='tax_amount' id="tax_amount" placeholder='0.00'
+                      class="form-control" readonly /></td>
+                </tr>
+                <tr>
+                  <th class="text-center">Grand Total</th>
+                  <td class="text-center"><input type="number" name='total_amount' id="total_amount" placeholder='0.00'
+                      class="form-control" readonly /></td>
+                </tr>
+              </tbody>
+            </table>
+           
+
+          </div>
+        
+      
+        <button  type="submit" class="btn btn-warning float-right" onclick="addinvoice()">Submit</button>
+        <p id="info"></p>       
+
+
+
+
+    </div>
+  </div>
+
+  <!-- jQuery  -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!--customer js-->
+  <script src="../JS/invoicefill.js"></script>
+  
+
+  </script>
+
+</body>
+
+</html>

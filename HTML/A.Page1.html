@@ -6,29 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Medicine Catagory</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../CSS/MAhmoud.css">
-     <link rel="stylesheet" href="../CSS/jquery-ui-timepicker-addon.min.css">
-     <link rel="stylesheet" href="../CSS/jquery-ui.min.css">
+    <link rel="stylesheet" href="../CSS/jquery-ui-timepicker-addon.min.css">
+    <link rel="stylesheet" href="../CSS/jquery-ui.min.css">
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <!-- <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script> -->
+
     <!--Tables-->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/">
 
     <!-- sweet alert -->
-    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="sweetalert2.all.min.js"></script>
-
-  
 
 </head>
 
@@ -39,13 +35,14 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <!--logo-->
-                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-                <strong>BS</strong>
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+
+                <strong>GR</strong>
             </div>
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">
+                    <a href="dashhhh.html">
                         <i class="fab fa-slideshare"></i>
                         <span class="CTAs">Dash Board</span>
                     </a>
@@ -56,23 +53,23 @@
                         <span class="CTAs">Customer</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-hand-holding-usd"></i>
                         <span class="CTAs">Invoice</span>
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="">New Invoice </a>
+                            <a href="invoicefill.html">New Invoice </a>
                         </li>
                         <li>
                             <a href="Manage_Invocie.html">Manage Invoice</a>
                         </li>
-                        
+
                     </ul>
                 </li>
                 <li>
-                    
+
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-tablets"></i>
                         <span class="CTAs">Medicine</span>
@@ -89,12 +86,12 @@
                         </li>
                     </ul>
                 </li>
-                
+
                 <li>
-                   
+
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-industry"></i>                      
-                          <span class="CTAs">Manufacturer</span>
+                        <i class="fas fa-industry"></i>
+                        <span class="CTAs">Manufacturer</span>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
@@ -110,15 +107,15 @@
                 </li>
                 <li>
                     <a href="stock.html">
-                       <i class="fas fa-dolly-flatbed"></i>
+                        <i class="fas fa-dolly-flatbed"></i>
                         <span class="CTAs">Stock </span>
                     </a>
                 </li>
                 <li>
-                   
+
                     <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-undo-alt"></i>                  
-                          <span class="CTAs">Return</span>
+                        <i class="fas fa-undo-alt"></i>
+                        <span class="CTAs">Return</span>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
@@ -130,13 +127,13 @@
                         <li>
                             <a href="Return2.html">Manufacturer Return List </a>
                         </li>
-                    </ul> 
+                    </ul>
                 </li>
                 <li>
-                   
+
                     <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-user"></i>                     
-                          <span class="CTAs">Staff</span>
+                        <i class="fas fa-user"></i>
+                        <span class="CTAs">Staff</span>
                     </a>
                     <ul class="collapse list-unstyled" id="pageSubmenu4">
                         <li>
@@ -145,21 +142,17 @@
                         <li>
                             <a href="staff2.html">Manage Employee</a>
                         </li>
-                        
-                    </ul> 
-                </li>
-            </ul>
-            
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-                </li>
-                <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li>
-            </ul>
 
-            
+                    </ul>
+
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs"  >
+                <li>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
+                </li>
+                
+            </ul>
         </nav>
 
         <!-- Page Content  -->
@@ -167,7 +160,7 @@
             <!--Navbar-->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                   
+
                     <button type="button" id="sidebarCollapse" class="btn " onclick="">
                         <i class="fas fa-align-left "></i>
 
@@ -184,13 +177,13 @@
                             <li class="nav-item  ">
                                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
                                     title="Notification"></i>
-                                <span class="badge badge-danger">4</span>
+                                <span id="expiredate" class="badge badge-danger"></span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
-                                    title="Sign out"></i>
-                            </li>
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
 
                         </ul>
 
@@ -200,11 +193,11 @@
             <!--MainBody-->
             <div class="d-flex flex-row bd-highlight mb-3">
                 <div class=" bd-highlight">
-                    <i class="bi bi-file-medical" style="font-size: 45px; color: #028090;" ></i>
+                    <i class="bi bi-file-medical" style="font-size: 45px; color: #028090;"></i>
                 </div>
                 <div class="pt-2 bd-highlight">
                     <h3 class="mb-0">Medicine</h3>
-                    
+
                     <small class="p-outo" style="color: lightslategray;">Category</small>
                 </div>
             </div>
@@ -223,8 +216,8 @@
                         <td>1</td>
                         <td>table</td>
                         <td>
-                            
-                            <button type="button" class=" btn btn-danger btn-sm  ml-3" data-target="#hh" data-toggle="modal"   title="Delete" >
+                            <button type="button" class=" btn btn-danger btn-sm  ml-3" data-target="#hh"
+                                data-toggle="modal" title="Delete">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -232,22 +225,23 @@
                     <tr>
                         <td>2</td>
                         <td>Capsule</td>
-                        
                         <td>
-                            
-                            <button type="button" class="btn btn-danger btn-sm  ml-3" data-target="#hh" data-toggle="modal"  title="Delete"  >
+
+                            <button type="button" class="btn btn-danger btn-sm  ml-3" data-target="#hh"
+                                data-toggle="modal" title="Delete">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Resperitory Solution	</td>
-                        
-                        
+                        <td>Resperitory Solution </td>
+
+
                         <td>
-                            
-                            <button type="button" class="btn btn-danger btn-sm  ml-3" data-target="#hh" data-toggle="modal"   title="Delete" >
+
+                            <button type="button" class="btn btn-danger btn-sm  ml-3" data-target="#hh"
+                                data-toggle="modal" title="Delete">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -255,11 +249,12 @@
                     <tr>
                         <td>4</td>
                         <td>Dispersible Tablet</td>
-                        
-                       
+
+
                         <td>
-                           
-                            <button type="button" class="btn btn-danger btn-sm ml-3" data-target="#hh" data-toggle="modal"   title="Delete">
+
+                            <button type="button" class="btn btn-danger btn-sm ml-3" data-target="#hh"
+                                data-toggle="modal" title="Delete">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -273,30 +268,30 @@
         </div>
     </div>
 
- 
-      
-      <!-- Modal -->
-      <div class="modal fade "  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="hh">
+
+
+    <!-- Modal -->
+    <div class="modal fade " tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="hh">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Oh Attention!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p class="dele">Are You Sure That You Want To Delete it?
-  
-                </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-danger">Yes</button>
-              </div>
-          </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Oh Attention!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="dele">Are You Sure That You Want To Delete it?
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Popper.JS -->
@@ -323,43 +318,12 @@
         });
 
         const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
-
-
-
-
-// swalWithBootstrapButtons.fire({
-//   title: 'Are you sure?',
-//   text: "You won't be able to revert this!",
-//   icon: 'warning',
-//   showCancelButton: true,
-//   confirmButtonText: 'Yes, delete it!',
-//   cancelButtonText: 'No, cancel!',
-//   reverseButtons: true
-// }).then((result) => {
-//   if (result.isConfirmed) {
-//     swalWithBootstrapButtons.fire(
-//       'Deleted!',
-//       'Your file has been deleted.',
-//       'success'
-//     )
-//   } else if (
-//     /* Read more about handling dismissals below */
-//     result.dismiss === Swal.DismissReason.cancel
-//   ) {
-//     swalWithBootstrapButtons.fire(
-//       'Cancelled',
-//       'Your imaginary file is safe :)',
-//       'error'
-//     )
-//   }
-// })
-       
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })       
     </script>
 </body>
 

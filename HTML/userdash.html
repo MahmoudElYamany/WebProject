@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script> -->
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+
+
+
+
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="userdash.html">
+                        <i class="fab fa-slideshare"></i>
+                        <span class="CTAs">Dash Board</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userCustomer.html">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="CTAs">Customer</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span class="CTAs">Invoice</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                        <li>
+                            <a href="userinvoicefill.html">New Invoice </a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tablets"></i>
+                        <span class="CTAs">Medicine</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="userA.Page1.html">Category</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="userstock.html">
+                        <i class="fas fa-dolly-flatbed"></i>
+                        <span class="CTAs">Stock </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs"  >
+                <li>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
+                                <span id="expiredate" class="badge badge-danger"></span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!--MainBody-->
+            <section class="content">
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2 ">
+                        <div class="small-box bg-success whitecolor ">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">11</span></h4>
+                                <p class="text-center">Total Customer</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <a href="Customer.html" class="small-box-footer">Total Customer </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+                        <div class="small-box bg-bringal whitecolor">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">8</span></h4>
+                                <p class="text-center">Total manufacturer</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <a href="H_Manage_Manufacturer.html" class="small-box-footer">Total manufacturer </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+                        <div class="small-box bg-darkgreen whitecolor">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">22</span></h4>
+                                <p class="text-center">Total Medicine</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-medkit"></i>
+                            </div>
+                            <a href="A.Page2.html" class="small-box-footer">Total Medicine </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+                        <div class="small-box bg-orange whitecolor">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">5</span></h4>
+                                <p class="text-center">Out Of Stock</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-medkit"></i>
+                            </div>
+                            <a href="stock.html" class="small-box-footer">Out Of Stock </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+                        <div class="small-box bg-danger whitecolor">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">11</span></h4>
+                                <p class="text-center">Expired</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <a href="stock.html" class="small-box-footer">Expired </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="small-box bg-pase whitecolor">
+                            <div class="inner">
+                                <h4 class="text-center"><span class="coundownnumber">36</span></h4>
+                                <p class="text-center">Total Invoice</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-print"></i>
+                            </div>
+                            <a href="Manage_Invocie.html" class="small-box-footer">Total Invoice </a>
+                        </div>
+                    </div>
+                    <input type="hidden" id="bestsalelabel" value="" name="">
+                    <input type="hidden" id="bestsaledata" value="" name="">
+                    <input type="hidden" value="10" name="" id="bestsalemax">
+                    <input type="hidden" name="" id="total_sales_amount" value="0">
+                    <input type="hidden" id="months"
+                        value="2021-01-01, 2021-01-02, 2021-01-03, 2021-01-04, 2021-01-05, 2021-01-06, 2021-01-07, 2021-01-08, 2021-01-09, 2021-01-10, 2021-01-11, 2021-01-12, 2021-01-13, 2021-01-14, 2021-01-15, 2021-01-16, 2021-01-17, 2021-01-18, 2021-01-19, 2021-01-20, 2021-01-21, 2021-01-22, 2021-01-23, 2021-01-24, 2021-01-25, 2021-01-26, 2021-01-27, 2021-01-28, 2021-01-29, 2021-01-30, 2021-01-31, "
+                        name="">
+                    <input type="hidden" id="progress_saledata"
+                        value="0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "
+                        name="">
+                    <input type="hidden" id="progress_purchasedata"
+                        value="0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "
+                        name="">
+                    <input type="hidden" name="" id="pie_total_sale" value="0">
+                    <input type="hidden" name="" id="pie_total_purchase" value="0">
+                    <input type="hidden" name="" id="pie_total_service" value="1">
+                    <input type="hidden" name="" id="pie_total_expense" value="0">
+                    <input type="hidden" name="" id="pie_total_salary" value="0">
+                    <input type="hidden" id="currency" value="$" name="">
+                </div>
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                        <div class="panel panel-bd">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <form action="#" name="form1" id="form1" enctype="multipart/form-data" method="post"
+                                        accept-charset="utf-8">
+                                        <input type="hidden" name="csrf_test_name"
+                                            value="44e354a3d662bb962504352f47e12c3d">
+                                        <div class="form-group row">
+                                            <div class="col-sm-7">
+                                                <h4> Monthly Progress Report</h4>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="panel-body"><iframe class="chartjs-hidden-iframe" tabindex="-1"
+                                    style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                                <canvas id="myChart" width="1758" height="772"
+                                    style="display: block; height: 386px; width: 879px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="panel panel-bd lobidisable">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Todays Report</h4>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="message_inner">
+                                    <div class="message_widgets">
+                                        <table class="table table-bordered table-striped table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Todays Report</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Sales</th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Purchase</th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Cash Received</th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Bank Received </th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Invoice Due </th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Service </th>
+                                                    <td class="text-right">$ 0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="panel panel-bd lobidisable">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <h4>Best Sales of January 2021</h4>
+                                </div>
+                            </div>
+                                <canvas id="bestsalechart" height="686" width="1288"
+                                    style="display: block; height: 343px; width: 644px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--Table-->
+    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+
+    <!-- dash -->
+    <script src="../node_modules/libs/js/canvasjs.min.js" type="text/javascript"></script>
+    <script src="../node_modules/libs/js/Chart.min.js" type="text/javascript"></script>
+    <script src="../node_modules/libs/js/dashboard.js" type="text/javascript"></script>
+
+
+
+
+
+    <!--customer js-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Table_id').DataTable();
+        });
+
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+        //Date format
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = mm + '/' + dd + '/' + yyyy;
+        today2 = yyyy + '-' + mm + '-' + '-' + dd;
+        /*----------------------------------------------------------------------------------------*/
+
+        //database medicince
+        if (window.openDatabase) {
+            //Create the database the parameters are 1. the database name 2.version number 3. a description 4. the size of the database (in bytes) 1024 x 1024 = 1MB
+            var db = openDatabase('pharmacy', '1.0', 'Test DB', 2 * 1024 * 1024);
+        }
+        db.transaction(function (tx) {
+            tx.executeSql('select expiredate from Medicine  ',
+                [], function (tx, results) {
+                    var count = 0;
+                    var listholder = document.getElementById("expiredate")
+                    for (var i = 0; i < results.rows.length; i++) {
+                        for (var prop in results.rows.item(i)) {
+                            if (results.rows.item(i)[prop] < today2) {
+                                count++;
+                                listholder.innerHTML = count
+                                console.log(count);
+                            }
+                        }
+                    }
+                }, null);
+        });
+    </script>
+</body>
+
+</html>

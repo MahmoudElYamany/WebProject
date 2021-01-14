@@ -31,14 +31,14 @@
     <nav id="sidebar">
       <div class="sidebar-header">
         <!--logo-->
-        <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-        <strong>BS</strong>
+        <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+        <strong>GR</strong>
       </div>
 
 
       <ul class="list-unstyled components">
         <li>
-          <a href="#">
+          <a href="dashhhh.html">
             <i class="fab fa-slideshare"></i>
             <span class="CTAs">Dash Board</span>
           </a>
@@ -56,10 +56,10 @@
           </a>
           <ul class="collapse list-unstyled " id="homeSubmenu">
             <li>
-              <a href="">New Invoice </a>
+              <a href="invoicefill.html">New Invoice </a>
             </li>
             <li>
-              <a href="#">Manage Invoice</a>
+              <a href="Manage_Invocie.html">Manage Invoice</a>
             </li>
 
           </ul>
@@ -142,14 +142,12 @@
           </ul>
         </li>
       </ul>
-      <ul class="list-unstyled CTAs">
+      <ul class="list-unstyled CTAs"  >
         <li>
-          <a href="#" class="download">Download source</a>
+            <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
         </li>
-        <li>
-          <a href="#" class="article">Back to article</a>
-        </li>
-      </ul>
+        
+    </ul>
     </nav>
 
     <!-- Page Content  -->
@@ -173,12 +171,13 @@
 
               <li class="nav-item  ">
                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip" title="Notification"></i>
-                <span class="badge badge-danger">4</span>
+                <span id="expiredate" class="badge badge-danger"></span>
 
               </li>
               <li class="nav-item t ">
-                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i>
-              </li>
+                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+               </li>
+
 
             </ul>
 
@@ -198,14 +197,26 @@
       </div>
       <hr>
       <!--input invoice-->
-
+<div class="row">
+  <div class="col-md-4 pb-3">
+    <div class="input-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing">Customer Name</span>
+      </div>
+      <input id="inputname" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing">
+      <div class="pl-3">
+        <button type="button" class="btn btn-warning"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
       <!--body invoice-->
         <div class="row clearfix">
           <div class="col-md-12">
             <table class="table table-hover" id="tab_logic">
               <thead>
                 <tr>
-                  <th class="text-center"> # </th>
+                 
                   <th class="text-center"> Product </th>
                   <th class="text-center"> Qty </th>
                   <th class="text-center"> Price </th>
@@ -248,7 +259,8 @@
                 </tr>
                 <tr>
                   <th class="text-center">Tax Amount</th>
-                  <td class="text-center"><input type="number" name='tax_amount' id="tax_amount" placeholder='0.00'
+                  <td class="text-center">
+                    <input type="number" name='tax_amount' id="tax_amount" placeholder='0.00'
                       class="form-control" readonly /></td>
                 </tr>
                 <tr>
@@ -263,7 +275,7 @@
           </div>
         
       
-        <button  type="submit" class="btn btn-warning float-right" onclick="additems()">Submit</button>
+        <button  type="submit" class="btn btn-warning float-right" onclick="addinvoice()">Submit</button>
         <p id="info"></p>       
 
 
@@ -280,10 +292,7 @@
 
   <!--customer js-->
   <script src="../JS/invoicefill.js"></script>
-  <script src="">
-    function additems() {
-  alert('hi');
-}
+  
 
   </script>
 

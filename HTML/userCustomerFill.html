@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Customer Fill</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+
+    <!-- test js tables  -->
+    <link rel="stylesheet" href="test.js">
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="userdash.html">
+                        <i class="fab fa-slideshare"></i>
+                        <span class="CTAs">Dash Board</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userCustomer.html">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="CTAs">Customer</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span class="CTAs">Invoice</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                        <li>
+                            <a href="userinvoicefill.html">New Invoice </a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tablets"></i>
+                        <span class="CTAs">Medicine</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="userA.Page1.html">Category</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="userstock.html">
+                        <i class="fas fa-dolly-flatbed"></i>
+                        <span class="CTAs">Stock </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs"  >
+                <li>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
+                                <span id="expiredate" class="badge badge-danger"></span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <!--MainBody-->
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class=" bd-highlight">
+                    <i class="bi bi-file-medical" style="font-size: 45px; color:#028090"></i>
+                </div>
+                <div class="pt-2 bd-highlight">
+                    <h3 class="mb-0">Customer</h3>
+                    <small class="p-auto">Add Customer</small>
+                </div>
+            </div>
+            <hr>
+            <!--input customer-->
+            <form class="px-4">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="inlineFormInputGroup">Customer Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" required>
+                    </div>
+                    <div class="form-group col-md-6 ">
+                        <div class="form-group ">
+                            <label for="inputGender">Gender<span class="text-danger">*</span> </label>
+                            <select id="inputGender" class="form-control" required>
+                                <option selected>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputEmail">E-mail<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputMobile">Mobile <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="inputMobile" placeholder="xxx-xxxxxxxxx" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPhone">Phone</label>
+                        <input type="tel" class="form-control" id="inputPhone" placeholder="xxx-xxxxxxxxx">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="inputCity">City<span class="text-danger">*</span></label>
+                        <select id="inputCity" class="form-control" required>
+                            <option selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-warning float-right" onclick="addCustomer()">Submit</button>
+            </form>
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- jQuery  -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--customer js-->
+    <script src="../JS/customer.js"></script>
+   
+</body>
+
+</html>

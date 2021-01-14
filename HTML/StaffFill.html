@@ -32,14 +32,14 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <!--logo-->
-                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-                <strong>BS</strong>
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
             </div>
 
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">
+                    <a href="dashhhh.html">
                         <i class="fab fa-slideshare"></i>
                         <span class="CTAs">Dash Board</span>
                     </a>
@@ -57,7 +57,7 @@
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="">New Invoice </a>
+                            <a href="invoicefill.html">New Invoice </a>
                         </li>
                         <li>
                             <a href="Manage_Invocie.html">Manage Invoice</a>
@@ -143,13 +143,11 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="list-unstyled CTAs">
+            <ul class="list-unstyled CTAs"  >
                 <li>
-                    <a href="#" class="download">Download source</a>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
                 </li>
-                <li>
-                    <a href="#" class="article">Back to article</a>
-                </li>
+                
             </ul>
         </nav>
 
@@ -175,14 +173,13 @@
                             <li class="nav-item  ">
                                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
                                     title="Notification"></i>
-                                <span class="badge badge-danger">4</span>
+                                <span id="expiredate" class="badge badge-danger"></span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
-                                    title="Sign out"></i>
-                            </li>
-
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
                         </ul>
 
                     </div>
@@ -244,7 +241,7 @@
                                         <video autoplay="true" id="videoElement"
                                             class="rounded-circle align-items-center d-flex m-auto "
                                             width="400"></video>
-                                        <canvas id="showscreenshot"></canvas>
+                                        <canvas id="showscreenshot" class="rounded-circle align-items-center d-flex m-auto " width="400"></canvas>
 
                                     </div>
                                     <div class="modal-footer">
@@ -258,7 +255,7 @@
                             </div>
                         </div>
                         <!--Apper message after taking imag-->
-                        <span class="text-success "><i class="fas fa-check"></i>Done</span>
+                        <span class="text-success " id="done">&ensp;</span>
                     </div>
                 </div>
                 <div class="form-row">
@@ -283,7 +280,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="inputCity">City<span class="text-danger">*</span></label>
-                        <select id="inputState" class="form-control" required>
+                        <select id="inputCity" class="form-control" required>
                             <option selected>Choose...</option>
                         </select>
                     </div>
@@ -307,7 +304,6 @@
                             <option selected>Choose...</option>
                             <option >Manger</option>
                             <option >Pharmasist</option>
-                            <option >sale Person</option>
                         </select>
                     </div>
                     <div class="form-group col-md-4">
@@ -343,7 +339,7 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!--customer js-->
-    <script src="../JS/customer.js"></script>
+    <script src="../JS/staff.js"></script>
    
 </body>
 

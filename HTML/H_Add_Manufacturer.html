@@ -31,13 +31,13 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <!--logo-->
-                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-                <strong>BS</strong>
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
             </div>
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">
+                    <a href="dashhhh.html">
                         <i class="fab fa-slideshare"></i>
                         <span class="CTAs">Dash Board</span>
                     </a>
@@ -55,7 +55,7 @@
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="">New Invoice </a>
+                            <a href="invoicefill.html">New Invoice </a>
                         </li>
                         <li>
                             <a href="Manage_Invocie.html">Manage Invoice</a>
@@ -142,13 +142,11 @@
                 </li>
             </ul>
             
-            <ul class="list-unstyled CTAs">
+            <ul class="list-unstyled CTAs"  >
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
                 </li>
-                <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li>
+                
             </ul>
         </nav>
 
@@ -174,13 +172,13 @@
                             <li class="nav-item  ">
                                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
                                     title="Notification"></i>
-                                <span class="badge badge-danger">4</span>
+                                <span id="expiredate" class="badge badge-danger"></span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
-                                    title="Sign out"></i>
-                            </li>
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
 
                         </ul>
 
@@ -206,16 +204,12 @@
                 <div class="form-row ">
                     <div class="form-group col-md-6">
                         <label for="inlineFormInputGroup">Manfucture Name<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="inlineFormInputGroup" required>
-
-
-
-
+                        <input type="text" class="form-control" id="inlineFormInputGroup" required>
                     </div>
 
                     <div class="form-group col-md-6 ">
-                        <label for="inlineFormInputGroup">Email<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="inlineFormInputGroup" required>
+                        <label for="inputEmail">Email<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="inputEmail" required>
 
                     </div>
                 </div>
@@ -257,7 +251,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-warning float-right" style="color: white;">Submit</button>
+                <button type="submit" class="btn btn-warning float-right" style="color: white;" onclick="addManifacture()">Submit</button>
             </form>
 
 
@@ -276,6 +270,7 @@
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
     <!--customer js-->
+    <script src="../JS/manifacture.js"></script>
     <script type="text/javascript">
 
 

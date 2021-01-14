@@ -1,5 +1,0 @@
-color1:white
-color2:black
-color3:bg-seccuss
-color4:bg-danger
-color5:#2d4e7c

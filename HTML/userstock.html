@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../CSS/MAhmoud.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--Tables-->
+    <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <!--logo-->
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+                <strong>GR</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="userdash.html">
+                        <i class="fab fa-slideshare"></i>
+                        <span class="CTAs">Dash Board</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userCustomer.html">
+                        <i class="fas fa-user-friends"></i>
+                        <span class="CTAs">Customer</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span class="CTAs">Invoice</span>
+                    </a>
+                    <ul class="collapse list-unstyled " id="homeSubmenu">
+                        <li>
+                            <a href="userinvoicefill.html">New Invoice </a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-tablets"></i>
+                        <span class="CTAs">Medicine</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="userA.Page1.html">Category</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="userstock.html">
+                        <i class="fas fa-dolly-flatbed"></i>
+                        <span class="CTAs">Stock </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs"  >
+                <li>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn ">
+                        <i class="fas fa-align-left "></i>
+
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item  ">
+                                <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
+                                    title="Notification"></i>
+                                <span id="expiredate" class="badge badge-danger"></span>
+
+                            </li>
+                            <li class="nav-item t ">
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--MainBody-->
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class=" bd-highlight">
+                    <i class="bi bi-file-medical" style="font-size: 45px; color: #028090;"></i>
+                </div>
+                <div class="pt-2 bd-highlight">
+                    <h3 class="mb-0">Stock Report  </h3>
+                    <small class="p-auto" style="color: lightslategray;">All stock Report</small>
+                </div>
+            </div>
+            <hr>
+
+            <table id="Table_id" class="table table-borderlessd" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>SL.</th>
+                        <th>Medicine Name </th>
+                        <th>Manufacturer Name</th>
+                        <th>Medicine Type </th>
+                        <th>Sell Price </th>               
+                        <th>In Quantity </th>
+                        <th>Sold QTY </th>
+                        <th>Stock </th>
+                        <th>Stock Sell Price </th>
+                        <th>Stock Purchase Price</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="datastock">
+                   
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!--Table-->
+    <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!--customer js-->
+    <script src="../JS/stock.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Table_id').DataTable();
+        });
+
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>

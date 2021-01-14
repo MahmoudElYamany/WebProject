@@ -20,7 +20,7 @@
     <!--Tables-->
     <link rel="stylesheet" href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../node_modules/datatables-bootstrap/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/">
+    
 
 </head>
 
@@ -31,13 +31,14 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <!--logo-->
-                <img src="https://dummyimage.com/230x50" class="rounded-lg p-2" alt="logo">
-                <strong>BS</strong>
+                <img src="../image/light.png" style="width: 230px; height: 150px;" class="rounded-lg " alt="logo">
+
+                <strong>GR</strong>
             </div>
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">
+                    <a href="dashhhh.html">
                         <i class="fab fa-slideshare"></i>
                         <span class="CTAs">Dash Board</span>
                     </a>
@@ -55,7 +56,7 @@
                     </a>
                     <ul class="collapse list-unstyled " id="homeSubmenu">
                         <li>
-                            <a href="">New Invoice </a>
+                            <a href="invoicefill.html">New Invoice </a>
                         </li>
                         <li>
                             <a href="Manage_Invocie.html">Manage Invoice</a>
@@ -142,14 +143,13 @@
                 </li>
             </ul>
             
-            <ul class="list-unstyled CTAs">
+            <ul class="list-unstyled CTAs"  >
                 <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                    <a style="text-align: center; background-color: yellow; color: #028090;" href="https://github.com/MahmoudElYamany/WebProject" class="download">Source code on GitHub</a>
                 </li>
-                <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li>
+                
             </ul>
+
         </nav>
 
         <!-- Page Content  -->
@@ -174,13 +174,13 @@
                             <li class="nav-item  ">
                                 <i class="bi bi-bell " style="font-size: 2rem; " data-toggle="tooltip"
                                     title="Notification"></i>
-                                <span class="badge badge-danger">4</span>
+                                <span id="expiredate" class="badge badge-danger"></span>
 
                             </li>
                             <li class="nav-item t ">
-                                <i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip"
-                                    title="Sign out"></i>
-                            </li>
+                                <a href="../HTML/login.html"><i class="bi bi-box-arrow-right " style="font-size: 2rem; " data-toggle="tooltip" title="Sign out"></i> </a>
+                               </li>
+   
 
                         </ul>
 
@@ -198,100 +198,26 @@
                 </div>
             </div>
             <hr>
-
             <table id="Table_id" class="table table-borderlessd" style="width:100%">
                 <thead>
-                    <tr>
-                        <th>SL.</th>
-                        <th >Medicine Name </th>
-                        <th >Generic Name</th>
-                        <th>Category </th>
-                        <th>Manfacturer Name </th>
-                        <th>Shelf</th>
-                        <th>Sell Price </th>
-                        <th>Purchase Price </th>
-                        <th>Strength </th>
-                        <th>Image  </th>
-                        <th>Action  </th>
+                    <tr >
+                        <th >Quantity</th>
+                        <th >Medicine Name</th>
+                        <th >Generaic Name</th>
+                        <th >Categry</th>
+                        <th >Manfacture Name</th>
+                        <th >Shelf</th>
+                        <th >Sell Price</th>
+                        <th >Strength</th>
+                        <th >Image  </th>
+                        <th >Action </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">Abon 42(500 mg + 200 IU)</td>
-                        <td class="col" >Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                          
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col">Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                      
-                            </button>
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col">Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                       
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td class="col">	Abon 42(500 mg + 200 IU)</td>
-                        <td class="col"> Calcium + Vitamin D3</td>
-                        <td>tablet</td>
-                        <td>ACL</td>
-                        <td>A-11</td>
-                        <td>35</td>
-                        <td>	30.00</td>
-                        <td>500 mg + 200 IU</td>
-                        <td>***Image</td>
-                        <td>
-                     
-                            <button type="button" class="btn btn-danger btn-sm ml-2" data-target="#hh" data-toggle="modal" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-
+                <tbody id="datamed">
+                    <tr><td ></td><td></td><td></td><td></td><td></td><td></td><td> </td><td></td><td></td><td></td></tr>
                 </tbody>
-
+           
+                
             </table>
 
 
@@ -320,30 +246,26 @@
           </div>
         </div>
       </div>
+
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Popper.JS -->
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Font Awesome JS -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!--Table-->
-    <script src="../node_modules/datatables-bootstrap/js/dataTables.bootstrap.min.js"></script>
     <script src="../node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    
     <!--customer js-->
+    <script src="../JS/medicence.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+     
             $('#Table_id').DataTable();
-        });
+     
 
 
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
     </script>
+    
 </body>
 
 </html>
